@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <!-- font-awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+        <!-- App box starts here -->
+        <div class="box">
+            <h1 class="text-center">BMI Calculator:</h1>
+            <form action="" id="myForm">
+                <div class="input-group">
+                    <input type="text" class="form-control" id="Height" placeholder="Height (in CM)">
+                    <label for="Height">Height (in CM)</label>
+                </div>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="Weight" placeholder="Height (in CM)">
+                    <label for="Weight">Weight (in KG)</label>
+                </div>
+            </form>
+            <button id="submit" type="submit" class="btn" onclick="main()">Calculate</button>
+
+            <!-- Result box -->
+            <div id="modal">
+                <p id="output" class="output"><b>000</b><span>Description</span></p>
+
+                <p class="bmi-desc"><b>Body mass index (BMI)</b>is a value derived from the mass and height of a person. A BMI of 18.5 - 24.9 indicates that you are at a healthy weight for your height. By maintaining a healthy weight, you your risk of developing serious health problems.</p>
+
+                <div class="close">
+                    <i class="fa-solid fa-xmark" class="close"></i>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
