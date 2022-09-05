@@ -2,9 +2,12 @@ function main(){
 
     const height = parseFloat(document.getElementById('Height').value);
     const weight = parseFloat(document.getElementById('Weight').value);
-
+    
+    
     let imc = weight / (height/100)**2;
     imc = imc.toFixed(2);
+        // document.getElementById('Height').value= "";
+        // document.getElementById('Weight').value= ""; calculate btn will reset value.
     //the formula is imc = weight/(height*height)
     //  IMC In French which means “Indice de Masse Corporelle”, is a measure used to evaluate body weight for adults and to evaluate the health risks associated with being overweight or underweight.
 
@@ -32,6 +35,7 @@ function main(){
         document.getElementById('output').innerHTML = 
         `Your BMI is: <b>${imc}</b> </br> Your weight is <span>over weight</span>
         `;
+        
     }
     else if(imc > 30 && imc <= 35){
         document.getElementById('output').innerHTML = 
@@ -40,7 +44,7 @@ function main(){
     }
     else if(imc > 35 && imc <= 40){
         document.getElementById('output').innerHTML = 
-        `Your BMI is: <b>{imc}</b> </br> Your weight is <span>obese class 2</span>
+        `Your BMI is: <b>${imc}</b> </br> Your weight is <span>obese class 2</span>
         `;
     }
     else if(imc > 40 && imc <= 45){
@@ -67,6 +71,6 @@ function main(){
     document.getElementById('modal').style.display = 'block';
     document.getElementById('close').onclick = function() {
         document.getElementById('modal').style.display = 'none';
-        document.getElementById('myform').reset(); 
+        document.getElementById('myForm').reset(); 
     }
 }
