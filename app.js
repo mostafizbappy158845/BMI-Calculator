@@ -69,7 +69,7 @@ function main(){
             }
             //showing result box
             document.getElementById('modal').style.display = 'block';
-            document.getElementById('close').onclick = function() {
+            document.getElementById('closeArea').onclick = function() {
                 document.getElementById('modal').style.display = 'none';
                 document.getElementById('myForm').reset(); 
             }
